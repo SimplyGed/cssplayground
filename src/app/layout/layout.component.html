@@ -1,0 +1,16 @@
+<div class="sidebar">
+    <div class="menu-btn" (click)="showMenu()">
+      <span [hidden]="show === false">&lt;</span>
+      <span [hidden]="show === true">&gt;</span>
+    </div>
+    <ul class="menu" [ngClass]="{'open': show === true}">
+    <li><a routerLink="/layout">Option 1</a></li>
+    <li><a routerLink="/layout">Option 2</a></li>
+    <li><a routerLink="/layout">Option 3</a></li>
+    <li><a routerLink="/rotate">Option 4</a></li>
+  </ul>
+</div>
+<div class="content" [ngClass]="{'open': show === true}">
+    <button class="btn btn-primary" (click)="showMenu()">Show menu</button>
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio minus aperiam excepturi quae, consequuntur, quibusdam ad dolores sit labore aspernatur inventore quod maxime cupiditate magnam assumenda at veniam ut reprehenderit?</span>
+</div>

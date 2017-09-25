@@ -1,0 +1,57 @@
+.sidebar {
+    background: black;
+    float: left;
+    height: 100%;
+}
+
+.menu {
+    padding: 0;
+    margin: 0;
+    width: 50px;
+    
+    transition: width 0.5s;
+}
+
+.menu li {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.menu li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    padding-left: 50px;
+    white-space: nowrap;
+}
+
+.menu li a:hover {
+    border-left: 5px solid red;
+}
+
+.content {
+    margin-left: 50px;
+    padding: 20px 10px;
+    transition: margin-left 0.5s;
+}
+
+.menu.open {
+    width: 150px;
+}
+
+.content.open {
+    margin-left: 150px;
+}
+
+.menu-btn {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    width: 25px;
+    height: 25px;
+    color: white;
+    font-size: 2em;
+
+}
