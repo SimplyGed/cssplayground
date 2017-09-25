@@ -1,0 +1,34 @@
+.container {
+    width: 100%;
+    height: 51px;
+
+    background: lightblue;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li a {
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 16px;
+}
+
+.menu li a:hover {
+    background-color: lightskyblue;
+}
+
+.active {
+    background-color: white;
+}
