@@ -53,5 +53,7 @@
     height: 25px;
     color: white;
     font-size: 2em;
+    margin: 10px;
 
+    cursor: pointer;
 }
