@@ -1,0 +1,54 @@
+
+.busy-container {
+    width: 120px;
+    height: 120px;
+    margin: 20px auto;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.circle75 {
+    position: relative;
+    background: transparent;
+    height: 100px;
+    width: 100px;
+
+    border: 10px solid transparent;
+    border-top: 10px solid blue;
+    border-radius: 50%;
+
+    animation: busy 2s infinite;
+}
+
+@keyframes busy {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.circle50 {
+    background: transparent;
+    height: 80%;
+    width: 80%;
+
+    border: 10px solid transparent;
+    border-top: 10px solid red;
+    border-radius: 50%;
+
+    animation: busy 4s infinite;
+}
+
+.circle25 {
+    background: transparent;
+    height: 80%;
+    width: 80%;
+
+    border: 10px solid transparent;
+    border-top: 10px solid green;
+    border-radius: 100%;
+
+    animation: busy 6s infinite;
+}

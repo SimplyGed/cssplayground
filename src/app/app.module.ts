@@ -10,6 +10,7 @@ import { CssRoutes } from './app.routing';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { LayoutComponent } from './layout/layout.component';
+import { BusyComponent } from './busy/busy.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LayoutComponent } from './layout/layout.component';
     RotateComponent,
     HeaderComponent,
     HomeComponent,
-    LayoutComponent
+    LayoutComponent,
+    BusyComponent
   ],
   imports: [
     BrowserModule,
