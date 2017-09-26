@@ -1,7 +1,6 @@
 <div class="sidebar">
-    <div class="menu-btn" (click)="showMenu()">
-      <span [hidden]="show === false">&lt;</span>
-      <span [hidden]="show === true">&gt;</span>
+    <div class="menu-btn" [ngClass]="{'open': show === false}" (click)="showMenu()">
+      <span><i class="fa fa-angle-double-left" aria-hidden="true"></i></span>
     </div>
     <ul class="menu" [ngClass]="{'open': show === true}">
     <li><a routerLink="/layout">Option 1</a></li>
