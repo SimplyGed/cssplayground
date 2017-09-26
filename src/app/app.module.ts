@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { LayoutComponent } from './layout/layout.component';
 import { BusyComponent } from './busy/busy.component';
+import { ElementsComponent } from './elements/elements.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { BusyComponent } from './busy/busy.component';
     HeaderComponent,
     HomeComponent,
     LayoutComponent,
-    BusyComponent
+    BusyComponent,
+    ElementsComponent
   ],
   imports: [
     BrowserModule,

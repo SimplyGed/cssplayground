@@ -1,7 +1,7 @@
 .sidebar {
     background: black;
     float: left;
-    height: calc(100% - 51px);
+    height: 100%;
 }
 
 .menu {
@@ -45,7 +45,7 @@
 }
 
 .menu.open {
-    width: 150px;
+    width: 50px;
 }
 
 .content.open {
@@ -53,8 +53,9 @@
 }
 
 .menu-btn {
+    visibility: hidden;
+
     display: flex;
-    align-content: center;
     justify-content: center;
 
     width: 50px;
@@ -63,6 +64,16 @@
 
     cursor: pointer;
     transition: .5s;
+}
+
+@media only screen and (min-width: 1000px) {
+    .menu-btn {
+        visibility: visible;
+    }
+
+    .menu.open {
+        width: 150px;
+    }
 }
 
 .menu-btn.open {

@@ -1,38 +1,46 @@
 .container {
-    width: 400px;
-    height: 200px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 50px auto;
+    width: 300px;
     display: flex;
 
     align-items: center;
-    justify-content: center;
-    
-    border: 2px solid black;
+    position: relative;
 }
 
 .box {
     display: flex;
-    width: 100px;
-    height: 100px;    
+    width: 80px;
+    height: 80px;    
     background-color: red;
     margin: 0 5px;
     
-    /* transform: rotate(78deg); */
-    animation: roll 6s infinite;
+    animation: roll 3s infinite;
     opacity: .5;
 }
 
-p, span {
+.b1x {
+    animation-delay: 0;
+}
+.b2x {
+    animation-delay: .25s;
+}
+.b3x {
+    animation-delay: .5s;
+}
+.b4x {
+    animation-delay: .75s;
+}
+
+p {
     margin: auto;
     font-size: 4em;
 }
 
 @keyframes roll {
     0% {
-        transform: rotate(90deg);
+        transform: rotate(0deg);
     }
     100% {
-        transform: rotate(450deg);
+        transform: rotate(360deg);
     }
 }
