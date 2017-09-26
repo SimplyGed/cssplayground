@@ -25,7 +25,8 @@ import { LayoutComponent } from './layout/layout.component';
     HttpModule,
     RouterModule.forRoot(CssRoutes)
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

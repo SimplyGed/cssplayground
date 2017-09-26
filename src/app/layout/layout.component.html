@@ -3,10 +3,9 @@
       <span><i class="fa fa-angle-double-left" aria-hidden="true"></i></span>
     </div>
     <ul class="menu" [ngClass]="{'open': show === true}">
-    <li><a routerLink="/layout">Option 1</a></li>
-    <li><a routerLink="/layout">Option 2</a></li>
-    <li><a routerLink="/layout">Option 3</a></li>
-    <li><a routerLink="/rotate">Option 4</a></li>
+    <li><a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/">Home</a></li>
+    <li><a routerLinkActive="active" routerLink="/layout">Layout</a></li>
+    <li><a routerLinkActive="active" routerLink="/rotate">Rotate</a></li>
   </ul>
 </div>
 <div class="content" [ngClass]="{'open': show === true}">
