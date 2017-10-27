@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { LayoutComponent } from './layout/layout.component';
 import { BusyComponent } from './busy/busy.component';
 import { ElementsComponent } from './elements/elements.component';
+import { ProgressComponent } from './progress/progress.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ElementsComponent } from './elements/elements.component';
     HomeComponent,
     LayoutComponent,
     BusyComponent,
-    ElementsComponent
+    ElementsComponent,
+    ProgressComponent
   ],
   imports: [
     BrowserModule,

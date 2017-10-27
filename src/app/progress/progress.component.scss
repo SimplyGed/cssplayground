@@ -1,0 +1,115 @@
+$circle-background: transparent;
+$circle-color: #97a71d;
+$circle-size: 120px;
+$inset-size: 115px;
+$shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+
+// progress border delay
+$transition-time: 1s;
+
+$rotation: 140deg;
+
+.wrapper {
+    margin-top: 50px;
+    margin-bottom: 20px
+}
+
+.slider-wrapper {
+    margin: 10px;
+
+    input {
+        width: 100%;        
+    }
+}
+
+.slider {
+    width: 100%;
+    height: 5px;
+    border: 1px solid black;
+}
+
+.radial-progress {
+    margin: 10px auto;
+
+    width: $circle-size;
+    height: $circle-size;
+    background: $circle-background;
+    border-radius: 50%;
+
+    .inset {
+        width: $inset-size;
+        height: $inset-size;
+        position: absolute;
+        margin: ($circle-size - $inset-size)/2;
+        background-color: white;
+        border-radius: 50%;
+        box-shadow: $shadow;
+    }
+
+    .inset .percentage {
+        $font-size: 22px;
+        $font-width: 44px;
+
+        width: $font-width;
+        font-size: $font-size;
+        font-weight: 800;
+        color: $circle-color;
+        text-align: center;
+        position: absolute;
+        top: ($inset-size - $font-size)/2;
+        left: ($inset-size - $font-width)/2;
+        line-height: 1;
+    }
+
+    $increment: 180deg / 100;
+
+    @for $i from 0 to 101 {
+        &[data-progress="#{$i}"] {
+            .inset .percentage:before {
+                content: "#{$i}%";
+            }
+
+            .circle {
+                .mask.full, .fill {
+                    transform: rotate($increment * $i);
+                }
+                .fill.fix {
+                    transform: rotate($increment * $i * 2);
+                }
+            }
+        }
+    }
+
+    .circle {
+        .shadow {
+            width: $circle-size;
+            height: $circle-size;
+            position: absolute;
+            border-radius: 50%;
+            box-shadow: $shadow inset;
+        }
+
+        .mask, .fill {
+            width: $circle-size;
+            height: $circle-size;
+            border-radius: 50%;
+            position: absolute;
+
+            transition: transform $transition-time;
+            backface-visibility: hidden;
+        }
+
+        .fill {
+            background: $circle-color;
+        }
+
+        .mask {
+            /* rect(<top>, <right>, <bottom>, <left>) */
+            clip: rect(0, $circle-size, $circle-size, $circle-size / 2);
+
+            .fill {
+                clip: rect(0, $circle-size / 2, $circle-size, 0);                
+            }
+        }
+    }
+}
