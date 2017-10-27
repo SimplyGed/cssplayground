@@ -32,3 +32,53 @@ input + span {
 input:focus + span {
     width: 303px;
 }
+
+.picture {
+    float: left;
+    margin: 0 10px;
+}
+
+.picture img {
+    width: 200px;
+    object-fit: contain;
+}
+
+.content {
+    float: left;
+    width: 300px;
+}
+
+.content span {
+    margin-left: 0;
+}
+
+.card-section {
+    clear: both;
+    padding-top: 10px;
+}
+
+.card {
+    margin: 10px;
+    height: 300px;
+}
+
+.card-raised {
+    box-shadow: 0 0 20px 5px rgba(128, 128, 128, 0.5);
+}
+
+.card-header {
+    height: 50px;
+    border-bottom: 1px solid rgba(128,128,128,0.5);
+}
+
+.card-title {
+    display: flex;
+    font-size: 1.5em;
+    color: rgb(128,128,128);
+    height: 100%;
+    align-items: center;
+}
+
+.card-title span {
+    padding-left: 10px;
+}
